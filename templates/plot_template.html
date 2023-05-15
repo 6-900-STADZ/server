@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <body>
+        <!-- <h1>Test Title!</h1> -->
+        <!-- <p>Here is my plot</p> -->
+        <div id='temperature_chart' class='chart'></div>
+        <div id='humidity_chart' class='chart'></div>
+        <div id='occupancy_chart' class='chart'></div>
+        <div id='avg_wait_time_chart' class='chart'></div>
+    </body>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type='text/javascript'>
+        // var graphs = {{graphJSON | safe}};
+        Plotly.newPlot('temperature_chart', {{temp_graph_JSON | safe}},{});
+        Plotly.newPlot('humidity_chart', {{humidity_graph_JSON | safe}},{});
+        Plotly.newPlot('occupancy_chart', {{occupancy_graph_JSON | safe}},{});
+        Plotly.newPlot('avg_wait_time_chart', {{waitTime_graph_JSON | safe}},{});
+
+    </script>
+</html>
